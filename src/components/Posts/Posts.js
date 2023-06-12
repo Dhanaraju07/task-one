@@ -48,7 +48,7 @@ const Posts = () => {
           >
             <h3>{each.title}</h3>
             <p>{each.body}</p>
-            <Link href={`/posts/${each.id}`}>View Post Detail</Link>
+            <Link to={`/posts/${each.id}`}>View Post Detail</Link>
           </div>
         );
       })}

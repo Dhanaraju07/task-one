@@ -1,4 +1,4 @@
-import { ADD_POST_REQUEST, ADD_POST_REQUEST_SUCCESS, GET_POSTS_REQUEST, GET_POSTS_REQUEST_FAILURE, GET_POSTS_REQUEST_SUCCESS } from "../actions";
+import {  ADD_POST_REQUEST_SUCCESS, GET_POSTS_REQUEST, GET_POSTS_REQUEST_FAILURE, GET_POSTS_REQUEST_SUCCESS } from "../actions";
 
 const postsReducer = (state = { posts: [], loading: false, error: null }, action) => {
     switch(action.type) {
@@ -22,7 +22,7 @@ const postsReducer = (state = { posts: [], loading: false, error: null }, action
         case ADD_POST_REQUEST_SUCCESS:
             return {
                 ...state,
-                posts: action.payload
+                posts: [...state.posts, action.payload]
             }
         default:
             return state
