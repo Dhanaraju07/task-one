@@ -1,0 +1,16 @@
+.home-top-container {
+    height: 100vh;
+    background-size: cover;
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+@media screen and (min-width: 368px) {
+    .home-main-container {
+        display: flex;
+        margin: 12px;
+    }
+}
