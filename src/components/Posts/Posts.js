@@ -20,39 +20,39 @@ const Posts = () => {
   }
   return (
     <>
-    <CreatePost />
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        width: "98vw",
-        height: "100vh",
-       
-        margin: "12px",
-        padding: "12px",
-      }}
-    >
-      <h1>List of All Posts</h1>
-      {posts.map((each, index) => {
-        return (
-          <div
-            style={{
-              display: "flex",
-              border: "1px solid grey",
-              flexDirection: "column",
-              width: "92vw",
-              padding: "12px",
-              margin: "12px",
-            }}
-            key={index}
-          >
-            <h3>{each.title}</h3>
-            <p>{each.body}</p>
-            <Link to={`/posts/${each.id}`}>View Post Detail</Link>
-          </div>
-        );
-      })}
-    </div>
+      <CreatePost />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          width: "98vw",
+          height: "100vh",
+
+          margin: "12px",
+          padding: "12px",
+        }}
+      >
+        <h1>List of All Posts</h1>
+        {posts.map((each, index) => {
+          return (
+            <div
+              style={{
+                display: "flex",
+                border: "1px solid grey",
+                flexDirection: "column",
+                width: "92vw",
+                padding: "12px",
+                margin: "12px",
+              }}
+              key={index}
+            >
+              <h3>{each.title}</h3>
+              <p>{each.body}</p>
+              <Link to={`/posts/${each.id}`}>View Post Detail</Link>
+            </div>
+          );
+        })}
+      </div>
     </>
   );
 };
